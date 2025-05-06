@@ -1,0 +1,74 @@
+body {
+  background-color: black!important;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+
+#home {
+  background: linear-gradient(145deg, #000000, #000000);
+  color: #fff;
+}
+
+
+.card:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease-in-out;
+}
+
+
+.card {
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
+  border: none;
+}
+
+
+footer {
+  background-color: #111;
+  border-top: 1px solid #444;
+}
+
+
+.card-border {
+  position: relative;
+  padding: 6px;
+  border-radius: 20px;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.card-border::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(60deg,#4ED7F1, #6FE6FC, #A8F1FF, #20038a, #2faa66);
+  background-size: 400% 400%;
+  animation: gradientCardBorder 8s ease infinite;
+  filter: blur(20px);
+  z-index: 1;
+}
+
+.card-border > .card {
+  position: relative;
+  z-index: 2;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* Animation keyframes */
+@keyframes gradientCardBorder {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
